@@ -75,7 +75,7 @@ if "messages" not in st.session_state or st.sidebar.button("Clear conversation h
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
-if query := st.chat_input(placeholder="What is this data about?"):
+if query := st.chat_input(placeholder="What is your question?"):
     
     st.session_state.messages.append({"role": "user", "content": query})
     st.chat_message("user").write(query)
